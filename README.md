@@ -27,7 +27,7 @@ The idea of this project is to scrape data from different online shops and aggre
 
 - [ihsaanfihaara](https://delivery.ihsaanfihaara.com/#/)
 
-https://sto.mv/Estore/Shop?site=sm04
+- https://sto.mv/Estore/Shop?site=sm04
 
 ### Steps
 
