@@ -44,7 +44,9 @@ The idea of this project is to scrape data from different online shops and aggre
 
 - [x] List out the online shops
   
-- [ ] Write a abstract scraper for aggregation (This scraper should work as a Driver based scraper where the driver will be specific for everyshop but the underlining scraper will be the same for every site)
+- [x] Write a abstract scraper for aggregation (This scraper should work as a Driver based scraper where the driver will be specific for everyshop but the underlining scraper will be the same for every site)
+
+- [x] Product Model
   
 - [ ] Store the data inside the database
   
