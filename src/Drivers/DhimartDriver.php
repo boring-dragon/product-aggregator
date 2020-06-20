@@ -5,6 +5,7 @@ namespace Jinas\Aggregator\Drivers;
 use Clue\React\Buzz\Browser;
 use Symfony\Component\DomCrawler\Crawler;
 use Psr\Http\Message\ResponseInterface;
+use Jinas\Aggregator\Models\Product;
 
 
 class DhimartDriver
@@ -22,10 +23,10 @@ class DhimartDriver
             $crawler = new Crawler((string) $response->getBody());
         
             $title = $crawler->filter('ol.products.list.items.product-items strong.product.name.product-item-name a.product-item-link')->first()->text();
-            $product_image = $crawler->filter('ol.products.list.items.product-items img.product-image-photo.hovered-img')->first()->attr('src');
+            $image = $crawler->filter('ol.products.list.items.product-items img.product-image-photo.hovered-img')->first()->attr('src');
             $price = $crawler->filter('ol.products.list.items.product-items span.price')->first()->text();
-        
-            print_r([$title,$product_image,$price]);
+
+            return new Product($title, $image, $price);
         });
     }
 }
