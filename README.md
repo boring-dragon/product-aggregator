@@ -33,7 +33,7 @@ https://sto.mv/Estore/Shop?site=sm04
   
 - Scraper should be able to identify when a product is not found when its searched
   
-- Store the scraped information in mysql database
+- Store the scraped information in SQlite database
   
 - Scrape with cron jobs and refresh the existing database with new products.
   
