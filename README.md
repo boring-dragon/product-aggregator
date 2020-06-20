@@ -13,17 +13,19 @@ The idea of this project is to scrape data from different online shops and aggre
 
 ### Sites
 
-[Dhimart - Your Online Mart](https://dhimart.mv/)
+- [Dhimart - Your Online Mart](https://dhimart.mv/)
 
-[VB Brothers - Providing genuine, quality, everyday products at an affordable price](https://www.vbbrothers.com.mv/)
+- [Octagen](https://octagen.store/shop)
 
-[Eat.mv](https://www.eat.mv/)
+- [VB Brothers - Providing genuine, quality, everyday products at an affordable price](https://www.vbbrothers.com.mv/)
 
-[Seagull Foods](https://foods.seagullmaldives.com/)
+- [Eat.mv](https://www.eat.mv/)
 
-[Good food maldives](https://www.goodfoodmaldives.com/)
+- [Seagull Foods](https://foods.seagullmaldives.com/)
 
-[ihsaanfihaara](https://delivery.ihsaanfihaara.com/#/)
+- [Good food maldives](https://www.goodfoodmaldives.com/)
+
+- [ihsaanfihaara](https://delivery.ihsaanfihaara.com/#/)
 
 https://sto.mv/Estore/Shop?site=sm04
 
