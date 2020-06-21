@@ -29,6 +29,13 @@ class Product
      * @var string
      */
     public $store;
+    
+    /**
+     * Product URl
+     *
+     * @var string
+     */
+    public $url;
 
     /**
      * __construct
@@ -38,11 +45,12 @@ class Product
      * @param  string $price
      * @return void
      */
-    public function __construct(string $title, string $image, int $price, string $store)
+    public function __construct(string $title, string $image, int $price, string $store, string $url)
     {
         $this->title = $title;
         $this->image = $image;
         $this->price = $price;
         $this->store = $store;
+        $this->url = $url;
     }
 }

@@ -31,11 +31,10 @@ class SeagullMaldives implements IDriver
         $crawler = new Crawler($responseBody);
 
         $title = $crawler->filter('li.list-view-item a.full-width-link span.visually-hidden')->first()->text();
-
         $image = $crawler->filter('li.list-view-item div.list-view-item__image-column img.list-view-item__image')->first()->attr('src');
-
         $price = str_replace("Rf", "", $crawler->filter('li.list-view-item div.price__regular dd span.price-item.price-item--regular')->first()->text());
+        $url = $crawler->filter('li.list-view-item a.full-width-link')->first()->attr('href');
 
-        return new Product((string) $title, (string) $image, (int) $price, "SeagullMaldives");
+        return new Product((string) $title, (string) $image, (int) $price, "SeagullMaldives", (string) $url);
     }
 }

@@ -33,7 +33,8 @@ class EatMvDriver implements IDriver
         $title = $crawler->filter('ol.products.list.items.product-items strong.product.name.product-item-name a.product-item-link')->first()->text();
         $image = $crawler->filter('ol.products.list.items.product-items img.product-image-photo')->first()->attr('src');
         $price = str_replace("MVR", "", $crawler->filter('ol.products.list.items.product-items span.price')->first()->text());
+        $url = $crawler->filter('ol.products.list.items.product-items a.product.photo.product-item-photo')->first()->attr('href');
 
-        return new Product((string) $title, (string) $image, (int) $price, "Eat.mv");
+        return new Product((string) $title, (string) $image, (int) $price, "Eatmv", (string) $url);
     }
 }
