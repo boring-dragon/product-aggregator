@@ -21,6 +21,7 @@ class ServiceProvider
                 ->get('shops.Dhimart.search') . "milk chocolate"));
 
         Container::register((new EatMvDriver($browser))
-            ->scrape(dot($this->configs)->get('shops.Eatmv.search') . "milk chocolate"));
+            ->scrape(dot($this->configs)
+                ->get('shops.Eatmv.search') . "milk chocolate"));
     }
 }
