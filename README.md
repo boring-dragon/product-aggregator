@@ -1,5 +1,5 @@
-# Groccery Product aggregation
-Groccery Product Aggregator written in PHP
+# Grocery Product aggregation
+Grocery Product Aggregator written in PHP
 
 This is an ongoing idea. Yet to be made a reality :D
 
