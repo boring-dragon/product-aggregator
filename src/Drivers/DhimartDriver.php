@@ -6,9 +6,7 @@ use Clue\React\Buzz\Browser;
 use Symfony\Component\DomCrawler\Crawler;
 use Psr\Http\Message\ResponseInterface;
 use React\Promise\PromiseInterface;
-use React\EventLoop\LoopInterface;
 use Jinas\Aggregator\Models\Product;
-use Clue\React\Block;
 
 
 class DhimartDriver implements IDriver

@@ -6,9 +6,7 @@ use Clue\React\Buzz\Browser;
 use Symfony\Component\DomCrawler\Crawler;
 use Psr\Http\Message\ResponseInterface;
 use React\Promise\PromiseInterface;
-use React\EventLoop\LoopInterface;
 use Jinas\Aggregator\Models\Product;
-use Clue\React\Block;
 
 
 class EatMvDriver implements IDriver
@@ -20,7 +18,7 @@ class EatMvDriver implements IDriver
         $this->browser = $browser;
     }
 
-    public function scrape($url) : PromiseInterface
+    public function scrape($url): PromiseInterface
     {
         return $this->browser->get($url)->then(function (ResponseInterface $response) {
 
@@ -28,15 +26,14 @@ class EatMvDriver implements IDriver
         });
     }
 
-    private function extract(string $responseBody) : Product
+    private function extract(string $responseBody): Product
     {
-            $crawler = new Crawler($responseBody);
-        
-            $title = $crawler->filter('ol.products.list.items.product-items strong.product.name.product-item-name a.product-item-link')->first()->text();
-            $image = $crawler->filter('ol.products.list.items.product-items img.product-image-photo')->first()->attr('src');
-            $price = str_replace("MVR", "",$crawler->filter('ol.products.list.items.product-items span.price')->first()->text());
+        $crawler = new Crawler($responseBody);
 
-            return new Product((string) $title, (string)$image, (int)$price, "Eat.mv");
+        $title = $crawler->filter('ol.products.list.items.product-items strong.product.name.product-item-name a.product-item-link')->first()->text();
+        $image = $crawler->filter('ol.products.list.items.product-items img.product-image-photo')->first()->attr('src');
+        $price = str_replace("MVR", "", $crawler->filter('ol.products.list.items.product-items span.price')->first()->text());
+
+        return new Product((string) $title, (string) $image, (int) $price, "Eat.mv");
     }
-
 }
