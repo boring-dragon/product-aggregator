@@ -7,10 +7,11 @@ use Jinas\Aggregator\Container;
 
 require __DIR__ . '/vendor/autoload.php';
 $configs = include(__DIR__ . '/configs.php');
-$loop = \React\EventLoop\Factory::create();
-(new ServiceProvider)->boot(new Browser($loop));
 
-            
+
+$loop = \React\EventLoop\Factory::create();
+(new ServiceProvider($configs))->boot(new Browser($loop));
+
 $results = Block\awaitAll(Container::$items, $loop);
 var_dump($results);
 
