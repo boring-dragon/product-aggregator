@@ -4,7 +4,7 @@ namespace Jinas\Aggregator;
 
 use Clue\React\Buzz\Browser;
 use Jinas\Aggregator\Container;
-use Jinas\Aggregator\Drivers\{DhimartDriver, EatMvDriver, SeagullMaldives};
+use Jinas\Aggregator\Drivers\{DhimartDriver, EatMvDriver, SeagullMaldivesDriver};
 
 class ServiceProvider
 {
@@ -23,7 +23,7 @@ class ServiceProvider
             ->scrape(dot($this->configs)
                 ->get('shops.eatmv.search') . "milk chocolate"));
 
-        Container::register((new SeagullMaldives($browser))
+        Container::register((new SeagullMaldivesDriver($browser))
             ->scrape(dot($this->configs)
                 ->get('shops.seagullfoods.search') . "milk chocolate"));
     }

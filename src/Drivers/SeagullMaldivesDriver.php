@@ -9,7 +9,7 @@ use React\Promise\PromiseInterface;
 use Jinas\Aggregator\Models\Product;
 
 
-class SeagullMaldives implements IDriver
+class SeagullMaldivesDriver implements IDriver
 {
     private $browser;
 

@@ -21,6 +21,13 @@ return [
             "description" => "Seagull Foods",
             "domain" => "https://foods.seagullmaldives.com",
             "search" => "https://foods.seagullmaldives.com/search?q="
+        ],
+
+        "sto_supermarket" => [
+            "name" => "stosuppermarket",
+            "description" => "online, shop, e-commerce, market, groceries, supermart,  home improvement, sto, maldives, state trading organization",
+            "domain" => "https://sto.mv/Estore/Shop?site=sm04",
+            "search" => "https://sto.mv/Estore/Shop/GetProducts?site=SM04&q="
         ]
     ]
 ];
