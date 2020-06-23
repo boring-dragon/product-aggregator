@@ -48,7 +48,7 @@ The idea of this project is to scrape data from different online shops and aggre
 
 - [x] Product Model
   
-- [ ] Store the data inside the database
+- [x] Store the data inside the database
   
 - [ ] Wire up the conditional Logic
   
