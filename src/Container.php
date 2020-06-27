@@ -11,5 +11,4 @@ class Container
     {
         static::$items[] = $value;
     }
-
 }

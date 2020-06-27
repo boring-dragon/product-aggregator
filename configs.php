@@ -29,5 +29,12 @@ return [
             "domain" => "https://sto.mv/Estore/Shop?site=sm04",
             "search" => "https://sto.mv/Estore/Shop/GetProducts?site=SM04&q="
         ]
+    ],
+
+    //Lookup Table Products
+    "products" => [
+        "milk chocolate",
+        "peanut butter",
+        "breads"
     ]
 ];

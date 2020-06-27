@@ -5,8 +5,7 @@ namespace Jinas\Aggregator;
 use PDO;
 use LessQL\Database;
 
-
-class DB 
+class DB
 {
     protected $db;
 
@@ -15,10 +14,17 @@ class DB
         $this->db = new Database(new PDO('sqlite:db.sqlite3'));
     }
 
-    public function create(array $products) : void
+    /**
+     * create
+     * 
+     *  Insert the products into the database when given an array as an argument.
+     *
+     * @param  mixed $products
+     * @return void
+     */
+    public function create(array $products): void
     {
-        foreach($products as $product)
-        {
+        foreach ($products as $product) {
             $this->db->createRow("products", $product)->save();
         }
     }
