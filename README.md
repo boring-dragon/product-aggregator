@@ -1,7 +1,7 @@
 # Product aggregation
 Product Aggregator written in PHP
 
-This is an ongoing idea. Yet to be made a reality :D
+I am still trying to figure things out 😁
 
 ### Idea
 
