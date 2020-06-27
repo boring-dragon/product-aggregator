@@ -1,5 +1,5 @@
-# Grocery Product aggregation
-Grocery Product Aggregator written in PHP
+# Product aggregation
+Product Aggregator written in PHP
 
 This is an ongoing idea. Yet to be made a reality :D
 
@@ -15,25 +15,14 @@ The idea of this project is to scrape data from different online shops and aggre
 
 - [Dhimart - Your Online Mart](https://dhimart.mv/)
 
-- [Octagen](https://octagen.store/shop)
-
-- [VB Brothers - Providing genuine, quality, everyday products at an affordable price](https://www.vbbrothers.com.mv/)
-
 - [Eat.mv](https://www.eat.mv/)
 
 - [Seagull Foods](https://foods.seagullmaldives.com/)
 
-- [Good food maldives](https://www.goodfoodmaldives.com/)
-
-- [ihsaanfihaara](https://delivery.ihsaanfihaara.com/#/)
-
-- https://sto.mv/Estore/Shop?site=sm04
 
 ### Steps
 
 - Search through the site for a given product name and extract the information of the first result
-  
-- Scraper should be able to identify when a product is not found when its searched
   
 - Store the scraped information in SQlite database
   
@@ -49,7 +38,7 @@ The idea of this project is to scrape data from different online shops and aggre
 - [x] Product Model
   
 - [x] Store the data inside the database
+
+- [x] Lookup table for products
   
-- [ ] Wire up the conditional Logic
-  
-- [ ] Refresh all the products inside the database in a cron job.
+- [x] Refresh all the products inside the database in a cron job.
