@@ -26,9 +26,13 @@ class EatMvDriver implements IDriver
         });
     }
 
-    private function extract(string $responseBody): Product
+    private function extract(string $responseBody)
     {
         $crawler = new Crawler($responseBody);
+
+        if (!$crawler->filter('ol.products.list.items.product-items strong.product.name.product-item-name a.product-item-link')->first()->count() > 0) {
+            return 0;
+        }
 
         $title = $crawler->filter('ol.products.list.items.product-items strong.product.name.product-item-name a.product-item-link')->first()->text();
         $image = $crawler->filter('ol.products.list.items.product-items img.product-image-photo')->first()->attr('src');

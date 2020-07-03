@@ -26,10 +26,13 @@ class SeagullMaldivesDriver implements IDriver
         });
     }
 
-    private function extract(string $responseBody): Product
+    private function extract(string $responseBody)
     {
         $crawler = new Crawler($responseBody);
 
+        if (!$crawler->filter('li.list-view-item a.full-width-link span.visually-hidden')->first()->count() > 0) {
+            return 0;
+        }
         $title = $crawler->filter('li.list-view-item a.full-width-link span.visually-hidden')->first()->text();
         $image = $crawler->filter('li.list-view-item div.list-view-item__image-column img.list-view-item__image')->first()->attr('src');
         $price = str_replace("Rf", "", $crawler->filter('li.list-view-item div.price__regular dd span.price-item.price-item--regular')->first()->text());

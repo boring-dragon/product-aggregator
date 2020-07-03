@@ -20,9 +20,9 @@ class ServiceProvider
             ->scrape(dot($this->configs)
                 ->get('shops.dhimart.search') . $product));
 
-        Container::register((new EatMvDriver($browser))
+       /*  Container::register((new EatMvDriver($browser))
             ->scrape(dot($this->configs)
-                ->get('shops.eatmv.search') . $product));
+                ->get('shops.eatmv.search') . $product)); */
 
         Container::register((new SeagullMaldivesDriver($browser))
             ->scrape(dot($this->configs)

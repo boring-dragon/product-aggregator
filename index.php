@@ -20,6 +20,7 @@ foreach (dot($configs)->get('products') as $product) {
     (new ServiceProvider($configs))->boot(new Browser($loop), (string) $product);
 }
 
+
 // Resolve all the promises inside the container and return back the result as an array
 $products = Block\awaitAll(Container::$items, $loop);
 

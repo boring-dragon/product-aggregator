@@ -25,6 +25,9 @@ class DB
     public function create(array $products): void
     {
         foreach ($products as $product) {
+            if (empty($product)) {
+                return;
+            }
             $this->db->createRow("products", $product)->save();
         }
     }

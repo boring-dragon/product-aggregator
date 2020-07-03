@@ -34,7 +34,11 @@ return [
     //Lookup Table Products
     "products" => [
         "milk chocolate",
-        "peanut butter",
-        "breads"
+        "chocolate",
+        "electronics",
+        "chocolate",
+        "bread",
+        "corn",
+        "apple"
     ]
 ];
