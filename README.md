@@ -7,6 +7,8 @@ I am still trying to figure things out 😁
 
 The idea of this project is to scrape data from different online shops and aggregate them into a dashboard and show the shop where that product is cheapest at.
 
+Read about it at [Aggregate Cheapest Products](https://jinas.me/aggregate-cheapest-products-from-online-shops-in-maldives)
+
 ### Resources
 
 [(PDF) Web scraping for food price research](https://www.researchgate.net/publication/337186825_Web_scraping_for_food_price_research)
