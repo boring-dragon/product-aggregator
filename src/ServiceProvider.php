@@ -22,7 +22,7 @@ class ServiceProvider
 
        Container::register((new EatMvDriver($browser))
             ->scrape(dot($this->configs)
-                ->get('shops.eatmv.search') . $product))
+                ->get('shops.eatmv.search') . $product));
 
         Container::register((new SeagullMaldivesDriver($browser))
             ->scrape(dot($this->configs)
