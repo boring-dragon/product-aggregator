@@ -2,8 +2,8 @@
 
 namespace Jinas\Aggregator;
 
-use PDO;
 use LessQL\Database;
+use PDO;
 
 class DB
 {
@@ -15,11 +15,12 @@ class DB
     }
 
     /**
-     * create
-     * 
+     * create.
+     *
      *  Insert the products into the database when given an array as an argument.
      *
-     * @param  mixed $products
+     * @param mixed $products
+     *
      * @return void
      */
     public function create(array $products): void
@@ -28,7 +29,7 @@ class DB
             if (empty($product)) {
                 return;
             }
-            $this->db->createRow("products", $product)->save();
+            $this->db->createRow('products', $product)->save();
         }
     }
 }
