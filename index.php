@@ -1,15 +1,13 @@
 <?php
 
-use Jinas\Aggregator\ServiceProvider;
-use Clue\React\Buzz\Browser;
 use Clue\React\Block;
+use Clue\React\Buzz\Browser;
 use Jinas\Aggregator\Container;
 use Jinas\Aggregator\DB;
+use Jinas\Aggregator\ServiceProvider;
 
-require __DIR__ . '/vendor/autoload.php';
-$configs = include(__DIR__ . '/configs.php');
-
-
+require __DIR__.'/vendor/autoload.php';
+$configs = include __DIR__.'/configs.php';
 
 $loop = \React\EventLoop\Factory::create();
 
@@ -20,11 +18,10 @@ foreach (dot($configs)->get('products') as $product) {
     (new ServiceProvider($configs))->boot(new Browser($loop), (string) $product);
 }
 
-
 // Resolve all the promises inside the container and return back the result as an array
 $products = Block\awaitAll(Container::$items, $loop);
 
 // Loop through all the products and create records inside the database
-(new DB)->create($products);
+(new DB())->create($products);
 
 $loop->run();

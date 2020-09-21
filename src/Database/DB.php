@@ -4,7 +4,6 @@ namespace Jinas\Aggregator\Database;
 
 use PDO;
 
-
 class DB
 {
     protected $db;
@@ -13,5 +12,4 @@ class DB
     {
         $this->db = new \LessQL\Database(new PDO('sqlite:db.sqlite3'));
     }
-    
 }

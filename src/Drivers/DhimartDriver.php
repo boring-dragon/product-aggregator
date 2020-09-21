@@ -3,11 +3,10 @@
 namespace Jinas\Aggregator\Drivers;
 
 use Clue\React\Buzz\Browser;
-use Symfony\Component\DomCrawler\Crawler;
+use Jinas\Aggregator\Models\Product;
 use Psr\Http\Message\ResponseInterface;
 use React\Promise\PromiseInterface;
-use Jinas\Aggregator\Models\Product;
-
+use Symfony\Component\DomCrawler\Crawler;
 
 class DhimartDriver implements IDriver
 {
@@ -21,7 +20,6 @@ class DhimartDriver implements IDriver
     public function scrape(string $url): PromiseInterface
     {
         return $this->browser->get($url)->then(function (ResponseInterface $response) {
-
             return $this->extract((string) $response->getBody());
         });
     }
@@ -36,9 +34,9 @@ class DhimartDriver implements IDriver
 
         $title = $crawler->filter('ol.products.list.items.product-items strong.product.name.product-item-name a.product-item-link')->first()->text();
         $image = $crawler->filter('ol.products.list.items.product-items img.product-image-photo.hovered-img')->first()->attr('src');
-        $price = str_replace("MVR", "", $crawler->filter('ol.products.list.items.product-items span.price')->first()->text());
+        $price = str_replace('MVR', '', $crawler->filter('ol.products.list.items.product-items span.price')->first()->text());
         $url = $crawler->filter('ol.products.list.items.product-items a.product.photo.product-item-photo')->first()->attr('href');
 
-        return new Product((string) $title, (string) $image, (int) $price, "Dhimart", (string) $url);
+        return new Product((string) $title, (string) $image, (int) $price, 'Dhimart', (string) $url);
     }
 }
